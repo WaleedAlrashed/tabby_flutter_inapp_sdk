@@ -61,9 +61,11 @@ class _TabbyPresentationSnippetNonStantardState
       ),
     );
     _browser.open(
-      url: Uri.parse(
-        '${snippetWebUrls[widget.lang]}'
-        '?currency=${widget.currency.displayName}$sdkQuery&installmentsCount=0',
+      url: WebUri.uri(
+        Uri.parse(
+          '${snippetWebUrls[widget.lang]}'
+          '?currency=${widget.currency.displayName}$sdkQuery&installmentsCount=0',
+        ),
       ),
       options: ChromeSafariBrowserClassOptions(
         android: AndroidChromeCustomTabsOptions(
